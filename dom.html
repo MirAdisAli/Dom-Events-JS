@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore DOM</title>
+    <style>
+        article{
+            border: 2px solid tomato;
+            border-radius: 20px;
+            margin: 5px;
+            padding: 5px;
+        }
+        .special h3{
+
+
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <h3>Exploring DOM</h3>
+            <!-- Most important article -->
+            <article>
+                <h3>article-1</h3>
+                <p title="I am the most important author" class="author" id="bestSeller">author-1</p>
+                <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium eaque, optio temporibus debitis quibusdam, cumque veritatis et deleniti dolore fuga necessitatibus? Eaque aut laboriosam saepe officia facere rem, perspiciatis libero.</p>
+            </article>
+            <article class="special">
+                <h3>article-2</h3>
+                <p class="author">author-2</p>
+                <p class="description">Exercitationem nostrum, ratione qui alias asperiores minima culpa quam expedita laudantium eius, esse nihil? Iusto reprehenderit, et nesciunt, qui mollitia itaque quisquam quae numquam dolorum hic excepturi quod voluptates soluta.</p>
+            </article>
+            <article class="special">
+                <h3>article-3</h3>
+                <p class="author">author-3</p>
+                <p class="description">Deleniti sunt, magni sequi blanditiis, voluptates quis ipsa placeat ducimus commodi quas minus adipisci velit non numquam eaque explicabo dolorum! Alias pariatur eveniet culpa totam velit distinctio nam cumque consequuntur?</p>
+            </article>
+
+
+            <p id="first">My first paragraph</p>
+            <p>This is the second paragraph</p>
+
+        </section>
+        <!-- <script>
+            var user = {name: 'Jalali Set', song: 'Kakatua', members: 6}
+            //DOM==> Document Object Model
+            console.log(document.body);
+        </script> -->
+
+        <script>
+            document.body.style.backgroundColor = 'blue';
+            var authors = document.querySelectorAll('.special h3');
+            //console.log(authors);
+            for(var i = 0; i <authors.length; i++){
+                var element = authors[i];
+                //console.log(element.innerHTML);
+                element.innerHTML = 'Lekhok-' + (i + 1);
+                element.setAttribute('title', 'All Author are same');
+                //console.log(element);
+                element.style.backgroundColor ='lightblue';
+                element.style.margin = '10px';
+
+            }
+
+            // var first = document.getElementById('first');
+            // first.style.color = 'green';
+            // first.style.backgroundColor = 'yellow';
+            // first.style.fontSize = '35px';
+
+        </script>
+    </main>
+</body>
+</html>
